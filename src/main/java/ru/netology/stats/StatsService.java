@@ -45,9 +45,9 @@ public class StatsService {
     //5. Количество месяцев, в которых продажи были ниже среднего
     public int amountMonthsUnderAverage(long[] sales) {
         int count = 0;
-        long salesAvg = countAverage(sales);
+        long salesAverage = countAverage(sales);
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < salesAvg) {
+            if (sales[i] < salesAverage) {
                 count++;
             }
         }
@@ -57,9 +57,9 @@ public class StatsService {
     //6. Количество месяцев, в которых продажи были выше среднего
     public int amountMonthsOverAverage(long[] sales) {
         int count = 0;
-        long salesAvg = countAverage(sales);
+        long salesAverage = countAverage(sales);
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] > salesAvg) {
+            if (sales[i] > salesAverage) {
                 count++;
             }
         }
